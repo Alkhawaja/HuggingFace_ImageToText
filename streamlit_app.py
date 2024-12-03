@@ -66,8 +66,9 @@ def save_uploadedfile(uploadedfile):
 
             except:
                 output = query('image.'+uploadedfiles.type[uploadedfiles.type.find('/')+1:],model)
-
             outputs.append(output[0]['generated_text'])
+            
+
         createtable(outputs,models)
             # st.write(model,output[0]['generated_text'])
         # return st.success("Saved File:{} to Data".format('image.'+uploadedfiles.type[uploadedfiles.type.find('/')+1:]))
